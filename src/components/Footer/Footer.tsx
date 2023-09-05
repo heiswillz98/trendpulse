@@ -50,7 +50,7 @@ const Footer = () => {
             </p>
             <p className="flex items-center gap-1 hover:text-white duration-300 cursor-pointer">
               <span>
-                <MdLocationOn />
+                <FaHome />
               </span>
               order tracking
             </p>

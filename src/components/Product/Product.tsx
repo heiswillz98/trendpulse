@@ -1,7 +1,10 @@
 import React from "react";
+import type { FC } from "react";
 import ProductCard from "./ProductCard";
+import { ProductsProps } from "./Product.props";
 
-const Products = () => {
+const Products: FC<ProductsProps> = ({ products }) => {
+  // console.log("product", product);
   return (
     <div>
       <div className="flex flex-col gap-4 items-center mt-10">
@@ -17,8 +20,15 @@ const Products = () => {
           recusandae ex excepturi nulla.
         </p>
       </div>
-      <div className="mx-auto max-w-screen-xl">
-        <ProductCard />
+      <div className="mx-auto max-w-screen-xl grid grid-cols-4 gap-10">
+        {Array.isArray(products) ? (
+          products.map((item, index) => (
+            <ProductCard key={index} product={item} />
+          ))
+        ) : (
+          // Handle the case where 'products' is not an array, e.g., display an error message.
+          <p>Products data is not available.</p>
+        )}
       </div>
     </div>
   );

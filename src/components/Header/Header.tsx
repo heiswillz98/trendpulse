@@ -5,7 +5,7 @@ import Logo from "@/assets/icons/logo";
 
 const Header = () => {
   return (
-    <div className="h-20 border-b-[2px] w-full border-b-gray-800 font-titleFont ">
+    <div className="h-20 border-b-[2px] w-full border-b-gray-800 font-titleFont sticky top-0 z-50  ">
       <div className="flex items-center justify-between mx-auto h-full max-w-screen-xl">
         <div className="text-[24px] underline">TrendPulse</div>
         <div className="flex items-center gap-8 ">
